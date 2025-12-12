@@ -1,0 +1,314 @@
+/* CSS Reset: https://www.joshwcomeau.com/css/custom-css-reset/ */
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+/* My code: */
+
+/* Custom fonts */
+
+@font-face {
+  font-family: 'Ubuntu-Bold';
+  src: url('./Fonts/Ubuntu-Bold/Ubuntu-Bold.woff2') format('woff2'),
+      url('./Fonts/Ubuntu-Bold/Ubuntu-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lora';
+  src: url('./Fonts/Lora/Lora-Regular.woff2') format('woff2'),
+      url('./Fonts/Lora/Lora-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Background */
+
+.img-road {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
+
+/* Highlight */
+
+::selection {
+  background: #EB3228bd;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+  width: 1vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #EB3228;
+}
+
+::-webkit-scrollbar-track {
+  background: #9990;
+}
+
+/* Containers */
+
+.main-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  padding: 1%;
+  gap: 1%;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  width: 35vw;
+  height: 15vh;
+  background-color: #7a7a7abd;
+  padding: 5px;
+  border: 2px solid #cccccc;
+  border-radius: 20px;
+  box-shadow: 0 0 50px black;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #7a7a7abd;
+  color: #231F20;
+  width: 35vw;
+  height: 100%;
+  padding: 2%;
+  border: 2px solid #ccc;
+  border-radius: 20px;
+  box-shadow: 0 0 50px black;
+  overflow: auto;
+}
+
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  width: fit-content;
+  height: 100%;
+  font-family: 'Lora', serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #231F20;
+  padding: 3%;
+  margin: 5% 0;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  background-color: #999;
+  overflow: auto;
+  scrollbar-color: #EB3228 #9990;
+}
+
+.credits-container {
+  width: fit-content;
+  height: fit-content;
+  background-color: #7a7a7abd;
+  border: 2px solid #cccccc;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 0 0 50px black;
+  overflow: auto;
+}
+
+/* logo-container children */
+
+.logo-img {
+    width: auto;
+    height: 100%;
+}
+
+/* text-container children */
+
+.text-header {
+  font-size: 3.5rem;
+  color: inherit;
+  font-family: 'Ubuntu-Bold', sans-serif;
+}
+
+hr {
+  height: 2px;
+  width: 80%;
+  background-color: #EB3228;
+  border: none;
+}
+
+.text-button {
+  font-size: 1.5rem;
+  color: inherit;
+  background-color: #ccc;
+  box-sizing: border-box;
+  border: 1px solid #999;
+  border-radius: 10px;
+}
+
+.text-p {
+  font-size: 1.5rem;
+}
+
+/* form-container children */
+
+.form-block {
+  margin: 1%;
+}
+
+.form-block-account {
+  margin-top: 1%;
+  width: 92%;
+}
+
+.form-block input, .form-block textarea {
+  color: #231F20;
+  background-color: #ccc;
+  box-sizing: border-box;
+  border-radius: 10px;
+  min-width: 1vw;
+}
+
+.form-block input:focus:invalid, .form-block textarea:focus:invalid {
+  border: 1px solid #EB3228;
+  background-color: #B5B5B5;
+}
+
+.form-block input:focus:valid, .form-block textarea:focus:valid {
+  border: 1px solid #00c200;
+  background-color: #B5B5B5;
+}
+
+.form-block input:focus, .form-block textarea:focus {
+  outline: 1px solid #231F20;
+}
+
+.log-in, .log-in:visited {
+  color: inherit;
+}
+
+/* credits-container */
+
+.credit {
+    font-size: 1.2rem;
+    font-family: 'Lora', serif;
+    font-weight: bold;
+    color: #231F20;
+}
+
+ .credit a, .credit a:visited {
+    color: #ccc;
+}
+
+/* Media query for screen views */
+/* Tablet view and mobile view */
+
+@media (max-width: 1500px) {
+
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-container, .text-container, .credits-container {
+    width: 50vw;
+  }
+
+  .text-container {
+    height: 70%;
+  }
+
+  .form-container {
+    width: auto;
+    padding: 3%;
+    height: 75%;
+    width: 100%;
+    font-size: 1.2rem;
+  }
+
+  .form-container .text-p, .text-button {
+    font-size: 1.2rem;
+  }
+
+  .text-header {
+    font-size: 3rem;
+  }
+
+}
+
+/* Mobile view */
+
+@media (max-width: 1000px) {
+
+  .logo-container, .text-container, .credits-container {
+    width: 90vw;
+  }
+
+}
+
+/* Failsafe to avoid breaking page when screen is too small*/
+
+@media (max-height: 120px) {
+  .logo-container, .text-container, .credits-container, ::-webkit-scrollbar {
+    display: none;
+  }
+}

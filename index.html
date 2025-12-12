@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <img class="img-road" src="Images/Road-Background.jpg" alt="Background Image">
+
+<main>
+
+    <div class="main-container">
+
+        <div class="logo-container">
+            <img class="logo-img" src="Images/Logo.svg" alt="Logo Image">
+        </div>
+
+        <div class="text-container">
+            <p class="text-header">Create Account</p><hr>
+
+            <form class="form-container" action="#" method="post">
+                <div class="form-block">
+                    <label for="first-name">First Name</label><br>
+                    <input type="text" placeholder="John" id="first-name" name="user_first_name" minlength="2" maxlength="50" required>
+                </div>
+                <div class="form-block">
+                    <label for="last-name">Last Name</label><br>
+                    <input type="text" placeholder="Doe" id="last-name" name="user_last_name" minlength="2" maxlength="50" required>
+                </div>
+                <div class="form-block form-block-three">
+                    <label for="email">Email</label><br>
+                    <input type="email" placeholder="example@email.com" id="email" name="user_email" maxlength="50" required>
+                </div>
+                <div class="form-block">
+                    <label for="phone-number">Phone Number</label><br>
+                    <input type="tel" placeholder="123-456-7890" id="phone-number" name="first_phone_number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}|[0-9]{10}" maxlength="12" required>
+                </div>
+                <div class="form-block">
+                    <label for="password">Password</label><br>
+                    <input type="password" placeholder="********" id="password" name="user_password" minlength="8" maxlength="100" required>
+                </div>
+                <div class="form-block">
+                    <label for="password-confirm">Confirm Password</label><br>
+                    <input type="password" placeholder="********" id="password-confirm" name="user_password_confirm" minlength="8" maxlength="100" required>
+                </div>
+                <div class="form-block form-block-account">
+                    <button class="text-button" type="submit">Create Account</button>
+                </div>
+                <div>
+                    <p class="text-p">Already have an account? <a class="log-in" href="#">Log in</a></p>
+                </div>
+            </form>
+
+            
+        </div>
+
+        <div class="credits-container">
+            <p class="credit">Logo found at <a href="https://brandlogo.org/dodge-logo-2024/9945/">Brand Logo</a></p>
+            <p class="credit">Background found at <a href="https://wallpaperaccess.com/asphalt" target="_blank" rel="noopener noreferrer">Wallpaper Access</a>
+        </div>
+    </div> 
+
+</main>
+
+</body>
+</html>
